@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
+import './Services.css'
 import service1 from '../../../Services-image/service1.jpg'
 import service2 from '../../../Services-image/service2.jpg'
 import service3 from '../../../Services-image/service3.jpg'
@@ -19,6 +20,10 @@ const services = () => {
         { id: 6, name: "Audio ads Production", description: '. Although this highly sought after robotic effect can be created by a vocoder and talkbox it’s important not to get them confused. The vocoder, which was invented in 1938..', price: 6000, ratings: '☆☆☆☆', image: service6 }
 
     ]
+
+
+
+
     return (
         <div className='mt-5'>
             <h1> Our Services</h1>
@@ -29,6 +34,7 @@ const services = () => {
                     key={service.id}
                 ></ServiceDetails>)}
             </div>
+
         </div>
     );
 };

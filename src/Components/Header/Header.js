@@ -1,17 +1,18 @@
 import React from 'react';
 import './Header.css'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Navbar sticky='top' className='header-navbar' collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar sticky='top' className='header-navbar ' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#home"><i id='header-title'>Upbeat Anthem</i> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Home</Nav.Link>
-                        <Nav.Link href="#pricing">Sevices</Nav.Link>
+                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} to={'/service'}>Sevices</Nav.Link>
                         <Nav.Link href="#pricing">Blogs</Nav.Link>
                         <Nav.Link href="#pricing">About me</Nav.Link>
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">

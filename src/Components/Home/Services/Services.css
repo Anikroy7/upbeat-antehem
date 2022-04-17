@@ -1,0 +1,10 @@
+.show-all-btn {
+    background-color: rgb(177, 199, 186);
+    border: 0;
+
+}
+
+.show-all-btn:hover {
+    background-color: rgb(177, 199, 150);
+    color: rgb(71, 7, 25);
+}
