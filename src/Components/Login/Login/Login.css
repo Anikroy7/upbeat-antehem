@@ -1,0 +1,11 @@
+.login-main-container {
+    height: 620px;
+    background-color: red;
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, rgb(216, 182, 243), rgb(194, 100, 202));
+}
+
+.login-container {
+    width: 400px;
+    height: 500px;
+}

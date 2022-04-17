@@ -3,9 +3,9 @@
 }
 
 
-#header-title {
+.header-title {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(238, 198, 165);
+    color: rgb(241, 206, 177);
     font-size: 30px;
     font-weight: 700;
 

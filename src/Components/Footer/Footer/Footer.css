@@ -2,3 +2,18 @@
     width: 100%;
     color: rgb(252, 193, 0);
 }
+
+.footer-title {
+    color: pink;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(247, 174, 85);
+    display: block;
+}
+
+a:hover {
+    color: rgb(231, 196, 144);
+    text-decoration: underline;
+}

@@ -7,12 +7,13 @@ const Header = () => {
     return (
         <Navbar sticky='top' className='header-navbar ' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home"><i id='header-title'>Upbeat Anthem</i> </Navbar.Brand>
+                {/* <Navbar.Brand href="#home"></Navbar.Brand> */}
+                <h3 className='mx-4'><b className='header-title'>Upbeat Anthem</b> </h3>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} to={'/service'}>Sevices</Nav.Link>
+
                         <Nav.Link href="#pricing">Blogs</Nav.Link>
                         <Nav.Link href="#pricing">About me</Nav.Link>
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -24,14 +25,14 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
+                        <Nav.Link as={Link} to="/login">
+                            Log in
                         </Nav.Link>
+                        <Nav.Link as={Link} to="/signup">Sign UP</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     );
 };
 
