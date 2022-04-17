@@ -4,7 +4,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <Navbar className='header-navbar' collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar sticky='top' className='header-navbar' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#home"><i id='header-title'>Upbeat Anthem</i> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

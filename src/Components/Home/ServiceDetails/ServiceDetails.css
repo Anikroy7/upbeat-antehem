@@ -1,0 +1,48 @@
+/* .service-details-container {
+    padding: 10px;
+    box-shadow: 5px 10px red;
+} */
+
+
+.service-details-container:nth-child(2) {
+    color: rgb(132, 194, 235);
+}
+
+.service-details-container img {
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.service-btn button {
+    border: 0;
+    background-color: rgb(238, 203, 150);
+    color: aliceblue;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    padding: 5px;
+    font-weight: 400;
+}
+
+@keyframes example {
+    0% {
+        background-color: rgb(133, 92, 92);
+    }
+
+    25% {
+        background-color: rgb(170, 170, 131);
+    }
+
+    50% {
+        background-color: rgb(181, 181, 221);
+    }
+
+    100% {
+        background-color: rgb(95, 136, 95);
+    }
+}
+
+/* .service-btn button:hover {
+    tan
+} */
