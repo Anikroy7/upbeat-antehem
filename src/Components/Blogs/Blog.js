@@ -14,6 +14,11 @@ const Blog = () => {
                 <li>Nhost</li>
             </section>
             <section>
+                <h2>Difference between authentication and authorization</h2>
+                <p>Authentication is the process of recognizing a user's identity. It is the mechanism of associating an incoming request with a set of identifying credentials.</p>
+                <p>uthorization is a security mechanism to determine access levels or user/client privileges related to system resources including files, services, computer programs, data and application features.</p>
+            </section>
+            <section>
                 <h3>What other service firebase provide?</h3>
                 <li>Realtime Database</li>
                 <li>File store</li>
