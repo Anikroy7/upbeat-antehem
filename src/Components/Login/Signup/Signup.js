@@ -32,7 +32,7 @@ const Signup = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         if (password.length < 6) {
-            setErrorMessage('Give at least 6 digits')
+            setErrorMessage('!! Give at least 6 digits')
         }
         else {
             createUserWithEmailAndPassword(email, password)
@@ -76,7 +76,7 @@ const Signup = () => {
                             <span><Link to={'/login'} className='text-black d-inline fw-bold'> Login</Link></span>
                         </p>
                         {
-                            <p className='text-danger'>!{errorMessage}</p>
+                            <p className='text-danger'>{errorMessage}</p>
                         }
                     </p>
                     <p className=' d-flex justify-content-center mt-3'>
