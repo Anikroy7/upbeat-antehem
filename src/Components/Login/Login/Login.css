@@ -2,10 +2,37 @@
     height: 620px;
     background-color: red;
     /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, rgb(216, 182, 243), rgb(194, 100, 202));
+    background-image: linear-gradient(to right, rgb(178, 144, 206), rgb(166, 60, 175));
 }
 
 .login-container {
     width: 400px;
     height: 500px;
+}
+
+
+
+.from-button {
+    background-image: linear-gradient(to right, #4b6cb7 0%, #182848 51%, #4b6cb7 100%)
+}
+
+.from-button {
+    margin: 10px;
+    padding: 5px 5px;
+    text-align: center;
+
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: 0;
+}
+
+.from-button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: rgb(221, 179, 221);
+    text-decoration: none;
 }
