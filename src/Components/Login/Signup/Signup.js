@@ -1,6 +1,6 @@
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -14,7 +14,7 @@ const Signup = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const navigate = useNavigate();
 
@@ -70,8 +70,8 @@ const Signup = () => {
                         </span>
                         <input className='border-0 border-bottom w-75 text-black p-2' placeholder='
                         Type your password' type="password" name="password" id="password" required />
-                        <p className='text-black mt-3 '>Forgot password?</p>
-                        <p className='text-black'>
+
+                        <p className='text-black mt-3'>
                             <span>Already have an account? </span>
                             <span><Link to={'/login'} className='text-black d-inline fw-bold'> Login</Link></span>
                         </p>

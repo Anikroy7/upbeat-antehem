@@ -26,7 +26,7 @@ const Header = () => {
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
 
-                        <Nav.Link href="#pricing">Blogs</Nav.Link>
+                        <Nav.Link as={Link} to="/blog">Blogs</Nav.Link>
                         <Nav.Link href="#pricing">About me</Nav.Link>
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

@@ -36,3 +36,12 @@
     color: rgb(221, 179, 221);
     text-decoration: none;
 }
+
+.reset-password {
+    color: #0f42a8;
+}
+
+.reset-password:hover {
+    color: rgb(97, 33, 3);
+    cursor: pointer;
+}
