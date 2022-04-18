@@ -1,12 +1,13 @@
 import React from 'react';
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
 import './Services.css'
-import service1 from '../../../Services-image/service1.jpg'
-import service2 from '../../../Services-image/service2.jpg'
-import service3 from '../../../Services-image/service3.jpg'
-import service4 from '../../../Services-image/service4.jpg'
-import service5 from '../../../Services-image/service5.jpg'
-import service6 from '../../../Services-image/service6.jpg'
+import service1 from '../../../images/Services-image/service1.jpg'
+import service2 from '../../../images/Services-image/service2.jpg'
+import service3 from '../../../images/Services-image/service3.jpg'
+import service4 from '../../../images/Services-image/service4.jpg'
+import service5 from '../../../images/Services-image/service5.jpg'
+import service6 from '../../../images/Services-image/service6.jpg'
+
 
 const services = () => {
     const services = [

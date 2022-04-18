@@ -47,6 +47,5 @@
 
 .service-btn button:hover {
     text-decoration: underline;
-    color: rgb(209, 71, 71);
     transition: 5s;
 }
