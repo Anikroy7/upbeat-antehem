@@ -19,7 +19,6 @@ const Signup = () => {
     const navigate = useNavigate();
 
     if (user) {
-
         navigate('/home')
     }
 
@@ -44,8 +43,8 @@ const Signup = () => {
     return (
         <div className='login-main-container h-100 p-5'>
             <div className='shadow-lg p-3 pb-5 mb-5 bg-body rounded login-container rounded bg-white p-4 mx-auto'>
+                <h1 className='text-black text-center mb-3'>Signup </h1>
                 <form onSubmit={handelFromSubmit}>
-                    <h1 className='text-black text-center mb-3'>Signup </h1>
 
                     <p className='ms-5 mt-3'>
                         <span className='text-black d-block mb-0'>Username</span>
@@ -75,9 +74,13 @@ const Signup = () => {
                             <span>Already have an account? </span>
                             <span><Link to={'/login'} className='text-black d-inline fw-bold'> Login</Link></span>
                         </p>
-                        {
-                            <p className='text-danger'>{errorMessage}</p>
-                        }
+                        <p>
+                            {
+                                errorMessage ? <p> {
+                                    <p className='text-danger'>{errorMessage}</p>
+                                }</p> : <p></p>
+                            }
+                        </p>
                     </p>
                     <p className=' d-flex justify-content-center mt-3'>
                         <input className='from-button w-50 ' type="submit" value="Sign up" />

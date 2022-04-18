@@ -11,40 +11,35 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import { async } from '@firebase/util';
 const Login = () => {
-
-    const [errorMessage, setErrorMessage] = useState('')
-    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [errorMessage, setErrorMessage] = useState('')
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const emailRef = useRef('');
     const passwordRef = useRef('');
 
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
-    if (error) {
-        console.log('error message');
-        setErrorMessage(error.message)
-    }
 
     if (user) {
         navigate(from, { replace: true });
     }
-
-
-
-    const handelOnSumit = event => {
-        event.preventDefault();
+    if (error) {
+        setErrorMessage(error?.message)
+    }
+    const handelLogin = event => {
+        event.preventDefault()
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        console.log(email, password)
         signInWithEmailAndPassword(email, password)
-
+        console.log(email, password);
     }
+
 
     const handelResetPassword = async () => {
         const email = emailRef.current.value;
@@ -59,7 +54,7 @@ const Login = () => {
             <div className='shadow-lg p-3 mb-5 bg-body rounded login-container rounded bg-white p-4 mx-auto'>
                 <div>
                     <h1 className='text-black text-center '>Login From</h1>
-                    <form onSubmit={handelOnSumit}>
+                    <form onSubmit={handelLogin}>
                         <div className='ms-5 mt-5'>
                             <span className='text-black d-block mb-2'>Email</span>
                             <span>
