@@ -1,6 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import RequireAuth from './Components/Auth/RequireAuth/RequireAuth';
 import Cheakout from './Components/Cheakout/Cheakout';
 import Footer from './Components/Footer/Footer/Footer';
 import Header from './Components/Header/Header';
@@ -17,7 +18,13 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
-        <Route path='/cheakout' element={<Cheakout></Cheakout>}> </Route>
+
+        <Route path='/cheakout' element={
+          <RequireAuth>
+            <Cheakout></Cheakout>
+          </RequireAuth>
+        }> </Route>
+
       </Routes>
       <Footer></Footer>
     </div >

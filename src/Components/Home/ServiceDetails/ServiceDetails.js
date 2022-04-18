@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ServiceDetails = ({ service }) => {
     const { name, price, description, ratings, image } = service;
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleCheakOut = () => {
 
