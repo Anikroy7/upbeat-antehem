@@ -20,7 +20,7 @@ const Header = () => {
         <Navbar sticky='top' className='header-navbar ' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 {/* <Navbar.Brand href="#home"></Navbar.Brand> */}
-                <h3 className='mx-4'><b className='header-title'>Upbeat Anthem</b> </h3>
+                <h3 className='mx-4'><b className='header-title'>Sound of Souls</b> </h3>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">

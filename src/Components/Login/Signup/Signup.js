@@ -78,7 +78,7 @@ const Signup = () => {
                             {
                                 errorMessage ? <p> {
                                     <p className='text-danger'>{errorMessage}</p>
-                                }</p> : <p></p>
+                                }</p> : <></>
                             }
                         </p>
                     </p>

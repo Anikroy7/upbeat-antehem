@@ -6,7 +6,7 @@ const Footer = () => {
             <hr className='footer-line' />
             <div className="footer-container row">
                 <div className='col-7' >
-                    <h3 className='footer-title'>UPBEAT ANTHEM</h3>
+                    <h3 className='footer-title'>Sound of Souls</h3>
                 </div>
                 <div className='col-5 row'>
                     <div className='col-6'>

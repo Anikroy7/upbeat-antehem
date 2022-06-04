@@ -1,6 +1,6 @@
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,9 +29,12 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
     }
-    if (error) {
-        setErrorMessage(error?.message)
-    }
+    useEffect(() => {
+        if (error) {
+            setErrorMessage(error?.message)
+
+        }
+    }, [error])
     const handelLogin = event => {
         event.preventDefault()
         const email = emailRef.current.value;
@@ -78,10 +81,10 @@ const Login = () => {
                                 <span>New to upbeat anthem? </span>
                                 <span><Link to={'/signup'} className='text-black d-inline fw-bold'> Sign up</Link></span>
                             </div>
+                            {
+                                errorMessage && <p className='text-danger mt-2'>{errorMessage}</p>
+                            }
                         </div>
-                        {
-                            <p className='text-danger'>{errorMessage}</p>
-                        }
                         <p className=' d-flex justify-content-center mt-3'>
                             <input className='from-button w-50 ' type="submit" value="Login" />
                         </p>
